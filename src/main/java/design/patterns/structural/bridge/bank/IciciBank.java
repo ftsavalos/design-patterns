@@ -2,11 +2,8 @@ package design.patterns.structural.bridge.bank;
 
 import design.patterns.structural.bridge.account.Account;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Slf4j
-@Component
 public class IciciBank extends Bank {
 
     public IciciBank(Account account) {
