@@ -4,6 +4,6 @@ public class CurrentAccount implements Account {
 
     @Override
     public String getTotalBenefits() {
-        return "There is no withdrawal limit fot current account";
+        return "This account has 4% interest rate with per day $5000 withdrawal limit";
     }
 }
