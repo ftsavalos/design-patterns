@@ -28,16 +28,4 @@ public class Main {
             return (T) new MyServiceFactoryBean<>(MyServiceImplB.class).getObject();
         }
     }
-
-
-//    @Bean
-//    public <T extends MyService> T getMyService() throws Exception {
-//        // some implementation resolving logic
-//        if (false) {
-//            MyServiceImplA myServiceImplA = new MyServiceFactoryBean<MyServiceImplA>().getObject();
-//            return (T) myServiceImplA;
-//        } else {
-//            return (T) new MyServiceFactoryBean<MyServiceImplB>().getObjectType();
-//        }
-//    }
 }
