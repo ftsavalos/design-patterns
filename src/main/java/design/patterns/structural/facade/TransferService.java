@@ -6,8 +6,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TransferService {
 
+
     public static void transfer(int amount, Account fromAccount, Account toAccount) {
         log.info("Transferring money");
+    }
+
+    {
+        System.out.println("Hello");
     }
 
 }

@@ -1,7 +1,9 @@
 package design.patterns.structural.facade;
 
 import design.patterns.structural.decorator.Account;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class BankingServiceFacadeImpl implements BankingServiceFacade {
 
     @Override
