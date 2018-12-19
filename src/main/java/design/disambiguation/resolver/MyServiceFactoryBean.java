@@ -5,13 +5,13 @@ import org.springframework.beans.factory.FactoryBean;
 
 public class MyServiceFactoryBean<T extends MyService> implements FactoryBean<MyService> {
 
-    Class<T> type;
+    private Class<T> type;
 
     public MyServiceFactoryBean(Class<T> type) {
         this.type = type;
     }
 
-    public T newInstance() throws IllegalAccessException, InstantiationException {
+    private T newInstance() throws IllegalAccessException, InstantiationException {
         return type.newInstance();
     }
 

@@ -1,5 +1,8 @@
 package design.disambiguation;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MyController {
 
     private final MyService myService;

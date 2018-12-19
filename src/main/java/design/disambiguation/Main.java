@@ -14,18 +14,17 @@ public class Main {
     public static void main(String[] args) {
 
         ConfigurableApplicationContext context = SpringApplication.run(Main.class);
-        MyService myService = (MyService) context.getBean("getMyService");
-
-        myService.getServiceType();
+        MyController myController = context.getBean(MyController.class);
+        myController.getServiceType();
     }
 
     @Bean
-    public <T extends MyService> T getMyService() throws Exception {
+    public MyService getMyService() throws Exception {
         // some implementation resolving logic
-        if (false) {
-            return (T) new MyServiceFactoryBean<>(MyServiceImplA.class).getObject();
+        if (true) {
+            return new MyServiceFactoryBean<>(MyServiceImplA.class).getObject();
         } else {
-            return (T) new MyServiceFactoryBean<>(MyServiceImplB.class).getObject();
+            return new MyServiceFactoryBean<>(MyServiceImplB.class).getObject();
         }
     }
 }
